@@ -3,16 +3,7 @@
 node_modules
 .idea
 logs
-# testing
-coverage
-server.js
-dist
-# production
-build
-static/css
-static/bundle.js
-static/vendor.js
-static/media
+
 
 src/sun/gallery-images
 src/sun/news-images
