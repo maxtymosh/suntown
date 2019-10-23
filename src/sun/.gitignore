@@ -1,0 +1,16 @@
+# node.js
+node_modules/
+
+# config
+
+# static files
+gallery-images/
+news-images/
+
+# build
+build/
+
+# logs
+newsletter-logs/
+
+.DS_Store
