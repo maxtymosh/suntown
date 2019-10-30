@@ -18,8 +18,6 @@ const metaFormatter = require('./sun/utils/metaFormatter');
 const config =require('./sun/config');
 //const PORT = process.env.PORT || 4000;
 
-console.log(path.join(__dirname, 'ass'))
-
 const news = require('./sun/routes/news');
 const gallery = require('./sun/routes/gallery');
 const user = require('./sun/routes/user');
@@ -41,7 +39,7 @@ const mongoOptions = {
   useCreateIndex: true
 };
 
-mongoose.connect(`mongodb://${server}/${database}`, mongoOptions, err => { if(err) console.log(err); console.log('connected')});
+mongoose.connect(`mongodb://${username}:${pass}@${server}/${database}`, mongoOptions, err => { if(err) console.log(err); console.log('connected')});
 
 // Necessary middleware
 app.use(compression());
@@ -115,9 +113,10 @@ app.get("*", (req, res) => {
 });
 
 Loadable.preloadAll().then(() => {
-  https.createServer({
-key: fs.readFileSync('../../../sslcert/domain-key.txt'),
-cert: fs.readFileSync('../../../sslcert/domain-crt.txt')
+if(true) return app.listen(3000);
+https.createServer({
+ key: fs.readFileSync('../../../sslcert/domain-key.txt'),
+ cert: fs.readFileSync('../../../sslcert/domain-crt.txt')
 }, app)
 .listen(3000, ()=> console.log('started'));
 

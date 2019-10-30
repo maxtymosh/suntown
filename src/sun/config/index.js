@@ -1,7 +1,7 @@
 module.exports = {
-  'username' : 'suntownAdmin',
-  'password' : 'eK6KcGY5Ak9tLkkS',
-  'server' : 'localhost',
-  'database' : 'suntown',
-  'secret' : 'Vkk2T6mKPUyR3fef'
+  username: 'testAdmin',
+  password: 'testAdmin1',
+  server: 'ds119802.mlab.com:19802',
+  database: 'suntown_dev',
+  secret: 'Vkk2T6mKPUyR3fef'
 };

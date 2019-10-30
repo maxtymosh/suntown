@@ -4,7 +4,7 @@ import reducer from "./reducers/";
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "https://suntown-ukraine.com/api"
+    baseURL: "https://localhost:3000/api"
 });
 
 const composeEnhancers =
